@@ -21,6 +21,16 @@ function Feed() {
       <TweetBox avatar={tweetAvatar} />
       {/* Post */}
       <Post avatar={tweetAvatar} image={thorPost} />
+      <Post avatar={tweetAvatar} image={thorPost} />
+      <Post avatar={tweetAvatar} image={thorPost} />
+      <Post avatar={tweetAvatar} image={thorPost} />
+      <Post avatar={tweetAvatar} image={thorPost} />
+      <Post avatar={tweetAvatar} image={thorPost} />
+      <Post avatar={tweetAvatar} image={thorPost} />
+      <Post avatar={tweetAvatar} image={thorPost} />
+      <Post avatar={tweetAvatar} image={thorPost} />
+      <Post avatar={tweetAvatar} image={thorPost} />
+
       {/* Post */}
       {/* Post */}
       {/* Post */}
