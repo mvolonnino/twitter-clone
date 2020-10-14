@@ -22,8 +22,22 @@
 }
 
 .tweetBox_imageInput {
+  flex: 1;
   border: none;
-  padding: 20px;
+  padding: 10px;
+}
+
+.tweetBox_image {
+  display: flex;
+  align-items: center;
+}
+
+.imageIcon {
+  padding-left: 20px;
+}
+
+.tweetBox_image:hover {
+  color: var(--twitter-color);
 }
 
 .tweetBox_tweetButton {
