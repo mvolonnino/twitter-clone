@@ -2,3 +2,7 @@ body {
   --twitter-color: #f55053;
   --twitter-background: #fee8e8;
 }
+
+.app {
+  display: flex;
+}
