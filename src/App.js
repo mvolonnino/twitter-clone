@@ -5,6 +5,7 @@ import "./App.css";
 // components
 import Sidebar from "./components/Sidebar/Sidebar";
 import Feed from "./components/Feed/Feed";
+import Widgets from "./components/Widgets/Widgets";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       {/* Feed */}
       <Feed />
       {/* Widgets */}
+      <Widgets />
     </div>
   );
 }
