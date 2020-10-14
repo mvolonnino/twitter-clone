@@ -1,18 +1,18 @@
 import React from "react";
 
 import "./TweetBox.css";
-import tweetAvatar from "./img/tweet_avatar.jpeg";
+
 import { Avatar, Button } from "@material-ui/core";
 
 // icons
 import ImageIcon from "@material-ui/icons/Image";
 
-function TweetBox() {
+function TweetBox({ avatar }) {
   return (
     <div className="tweetBox">
       <form>
         <div className="tweetBox_input">
-          <Avatar src={tweetAvatar} />
+          <Avatar src={avatar} />
           <input placeholder="What's happening?" type="text"></input>
         </div>
         <div className="tweetBox_image">
