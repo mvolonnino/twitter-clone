@@ -41,21 +41,25 @@
 #chat:hover {
   color: var(--twitter-color);
   transition: color 100ms ease-out;
+  cursor: pointer;
 }
 
 #retweet:hover {
   color: green;
   transition: color 100ms ease-out;
+  cursor: pointer;
 }
 
 #favorite:hover {
   color: var(--twitter-color);
   transition: color 100ms ease-out;
+  cursor: pointer;
 }
 
 #publish:hover {
   color: blue;
   transition: color 100ms ease-out;
+  cursor: pointer;
 }
 
 .post_headerSpecial {
