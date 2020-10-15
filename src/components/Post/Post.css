@@ -38,6 +38,26 @@
   color: var(--twitter-color);
 }
 
+#chat:hover {
+  color: var(--twitter-color);
+  transition: color 100ms ease-out;
+}
+
+#retweet:hover {
+  color: green;
+  transition: color 100ms ease-out;
+}
+
+#favorite:hover {
+  color: var(--twitter-color);
+  transition: color 100ms ease-out;
+}
+
+#publish:hover {
+  color: blue;
+  transition: color 100ms ease-out;
+}
+
 .post_headerSpecial {
   font-weight: 600;
   font-size: 13px;

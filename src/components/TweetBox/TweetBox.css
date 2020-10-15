@@ -38,6 +38,7 @@
 
 .tweetBox_image:hover {
   color: var(--twitter-color);
+  transition: color 100ms ease-out;
 }
 
 .tweetBox_tweetButton {
