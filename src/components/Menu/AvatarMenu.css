@@ -1,0 +1,9 @@
+.avatar_dropdownButton {
+  background-color: var(--twitter-color) !important;
+}
+
+.avatar_Button {
+  margin-top: 5px;
+  margin-left: auto;
+  padding: 5px;
+}

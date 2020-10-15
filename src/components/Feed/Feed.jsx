@@ -25,10 +25,11 @@ function Feed() {
         <h2>Home</h2>
       </div>
       {/* TweetBox */}
-      <TweetBox avatar={tweetAvatar} />
+      <TweetBox avatar="https://img.icons8.com/color/96/000000/thor.png" />
       {/* Post */}
-      {posts.map((post) => (
+      {posts.map((post, i) => (
         <Post
+          key={i}
           displayName={post.displayName}
           username={post.username}
           verified={post.verified}

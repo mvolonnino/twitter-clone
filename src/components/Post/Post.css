@@ -36,6 +36,7 @@
 .post_badge {
   font-size: 14px !important;
   color: var(--twitter-color);
+  margin-left: 2px;
 }
 
 #chat:hover {

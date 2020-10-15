@@ -31,7 +31,7 @@ function Post({ displayName, username, verified, text, image, avatar }) {
             <p>{text}</p>
           </div>
         </div>
-        <img src={image} alt="post" />
+        {!image ? <></> : <img src={image} alt="post" />}
         <div className="post_footer">
           <ChatBubbleOutlineIcon id="chat" fontSize="small" />
           <RepeatIcon id="retweet" fontSize="small" />

@@ -21,6 +21,15 @@
   border: none;
 }
 
+.tweetInfo > input {
+  flex: 1;
+  margin-left: 15px;
+  margin-bottom: 5px;
+  padding: 10px;
+  font-size: 15px;
+  border: none;
+}
+
 .tweetBox_imageInput {
   flex: 1;
   border: none;
