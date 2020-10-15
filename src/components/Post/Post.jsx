@@ -20,16 +20,15 @@ function Post({ displayName, username, verified, text, image, avatar }) {
         <div className="post_header">
           <div className="post_headerText">
             <h3>
-              Matt Volonnino{" "}
+              {displayName}
               <span className="post_headerSpecial">
-                <VerifiedUserIcon className="post_badge" /> @mvols16
+                {verified && <VerifiedUserIcon className="post_badge" />} @
+                {username}
               </span>
             </h3>
           </div>
           <div className="post_headerDescription">
-            <p>
-              This is my twitter clone built with React and the power of Thor!
-            </p>
+            <p>{text}</p>
           </div>
         </div>
         <img src={image} alt="post" />
