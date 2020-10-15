@@ -32,7 +32,7 @@ function Post({ displayName, username, verified, text, image, avatar }) {
             </p>
           </div>
         </div>
-        <img src={image} alt="posted image" />
+        <img src={image} alt="post" />
         <div className="post_footer">
           <ChatBubbleOutlineIcon fontSize="small" />
           <RepeatIcon fontSize="small" />
