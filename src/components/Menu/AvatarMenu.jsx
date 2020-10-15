@@ -89,9 +89,9 @@ export default function AvatarMenu() {
           return (
             <StyledMenuItem key={i} onClick={(e) => setTweetAvatar(avatar[1])}>
               <ListItemAvatar>
-                <Avatar src={avatar[1]} />
+                <Avatar src={avatar[1]} onClick={handleClose} />
               </ListItemAvatar>
-              <ListItemText primary={avatar[0]} />
+              <ListItemText primary={avatar[0]} onClick={handleClose} />
             </StyledMenuItem>
           );
         })}

@@ -1,5 +1,6 @@
 .avatar_dropdownButton {
   background-color: var(--twitter-color) !important;
+  color: white !important;
 }
 
 .avatar_Button {

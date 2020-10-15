@@ -23,7 +23,7 @@ function Widgets() {
         <TwitterTimelineEmbed
           sourceType="profile"
           screenName="Marvel"
-          options={{ height: 500 }}
+          options={{ height: 400 }}
         />
         <TwitterShareButton
           className="widgets_tweetButton"
