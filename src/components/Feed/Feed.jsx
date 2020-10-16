@@ -6,7 +6,7 @@ import Post from "../Post/Post";
 import db from "../../database/firebase";
 
 // avatar
-import tweetAvatar from "./img/tweet_avatar.jpeg";
+// import tweetAvatar from "./img/tweet_avatar.jpeg";
 
 function Feed() {
   const [posts, setPosts] = useState([]);
