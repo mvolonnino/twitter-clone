@@ -17,7 +17,14 @@ function Feed() {
     db.collection("posts")
       .orderBy("timestamp", "desc")
       .onSnapshot((snapshot) =>
-        setPosts(snapshot.docs.map((doc) => doc.data()))
+        setPosts(
+          snapshot.docs.map((doc) => {
+            return {
+              docID: doc.id,
+              docData: doc.data(),
+            };
+          })
+        )
       );
   }, []);
   console.log({ posts });
@@ -32,16 +39,16 @@ function Feed() {
       <TweetBox avatar="https://img.icons8.com/color/96/000000/thor.png" />
       {/* Post */}
       <FlipMove>
-        {posts.map((post, i) => (
+        {posts.map((post) => (
           <Post
-            key={i}
-            displayName={post.displayName}
-            username={post.username}
-            verified={post.verified}
-            text={post.text}
-            avatar={post.avatar}
-            image={post.image}
-            timestamp={post.timestamp}
+            key={post.docID}
+            displayName={post.docData.displayName}
+            username={post.docData.username}
+            verified={post.docData.verified}
+            text={post.docData.text}
+            avatar={post.docData.avatar}
+            image={post.docData.image}
+            timestamp={post.docData.timestamp}
           />
         ))}
       </FlipMove>
