@@ -7,3 +7,5 @@ This project is a fun twitter clone with a Marvel Universe twist. Instead of hav
 Just a twitter clone, so only Home page is functional, with an added live twitter feed on the Widgets area of Marvel Entertainment.
 
 This project was to familiarize more so with React and front-end UI more so authentication that I have done in other projects.
+
+\*\* more to come
