@@ -42,9 +42,7 @@ const StyledMenuItem = withStyles((theme) => ({
 }))(MenuItem);
 
 export default function AvatarMenu() {
-  const { tweetAvatar, setTweetAvatar } = useContext(TweetAvatarContext);
-  // console.log({ tweetAvatar });
-
+  const { setTweetAvatar } = useContext(TweetAvatarContext);
   const avatarObj = {
     thor: {
       url: "https://img.icons8.com/color/96/000000/thor.png",
@@ -92,8 +90,6 @@ export default function AvatarMenu() {
       username: "Wolverine",
     },
   };
-  // console.log(Object.entries(avatarObj));
-
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleClick = (event) => {
