@@ -38,6 +38,7 @@ function TweetBox({ avatar }) {
         setTweetAvatar("")
       );
   };
+
   return (
     <div className="tweetBox">
       <form>
@@ -53,21 +54,21 @@ function TweetBox({ avatar }) {
         </div>
         <div className="tweetInfo_display">
           <div className="tweetInfo_name">
-            <label for="displayName">Display Name:</label>
+            <label htmlFor="displayName">Display Name:</label>
             <input
               id="displayName"
               onChange={(e) => setTweetDisplayName(e.target.value)}
-              value={tweetAvatar.displayName}
+              value={tweetAvatar.displayName || ""}
               placeholder="Tell us your name"
               type="text"
             ></input>
           </div>
           <div className="tweetInfo_username">
-            <label for="username">Username:</label>
+            <label htmlFor="username">Username:</label>
             <input
               id="username"
               onChange={(e) => setTweetUsername(e.target.value)}
-              value={tweetAvatar.username}
+              value={tweetAvatar.username || ""}
               placeholder="Tell us your username?"
               type="text"
             ></input>
