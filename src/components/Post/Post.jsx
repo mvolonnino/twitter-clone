@@ -11,7 +11,10 @@ import PublishIcon from "@material-ui/icons/Publish";
 import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
 
 const Post = forwardRef(
-  ({ displayName, username, verified, text, image, avatar }, ref) => {
+  (
+    { displayName, username, verified, text, image, avatar, timestamp },
+    ref
+  ) => {
     return (
       <div className="post" ref={ref}>
         <div className="post_avatar">
@@ -24,7 +27,8 @@ const Post = forwardRef(
                 {displayName}
                 <span className="post_headerSpecial">
                   {verified && <VerifiedUserIcon className="post_badge" />} @
-                  {username}
+                  {username} *{" "}
+                  {`${timestamp.dateString} ${timestamp.timeString}`}
                 </span>
               </h3>
             </div>

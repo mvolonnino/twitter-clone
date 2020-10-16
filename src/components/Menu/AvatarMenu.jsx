@@ -43,7 +43,7 @@ const StyledMenuItem = withStyles((theme) => ({
 
 export default function AvatarMenu() {
   const { tweetAvatar, setTweetAvatar } = useContext(TweetAvatarContext);
-  console.log({ tweetAvatar });
+  // console.log({ tweetAvatar });
 
   const avatarObj = {
     thor: {
