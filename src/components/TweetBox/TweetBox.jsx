@@ -12,8 +12,6 @@ import ImageIcon from "@material-ui/icons/Image";
 
 function TweetBox({ avatar }) {
   const [tweetMessage, setTweetMessage] = useState("");
-  const [tweetDisplayName, setTweetDisplayName] = useState("");
-  const [tweetUsername, setTweetUsername] = useState("");
   // const [tweetVerified, setTweetVerified] = useState(false);
   const [tweetImage, setTweetImage] = useState("");
   const { tweetAvatar, setTweetAvatar } = useContext(TweetAvatarContext);
@@ -30,13 +28,7 @@ function TweetBox({ avatar }) {
         image: tweetImage,
         avatar: tweetAvatar.url,
       })
-      .then(
-        setTweetDisplayName(""),
-        setTweetMessage(""),
-        setTweetUsername(""),
-        setTweetImage(""),
-        setTweetAvatar("")
-      );
+      .then(setTweetMessage(""), setTweetImage(""), setTweetAvatar(""));
   };
 
   return (
@@ -57,7 +49,7 @@ function TweetBox({ avatar }) {
             <label htmlFor="displayName">Display Name:</label>
             <input
               id="displayName"
-              onChange={(e) => setTweetDisplayName(e.target.value)}
+              readOnly
               value={tweetAvatar.displayName || ""}
               placeholder="Tell us your name"
               type="text"
@@ -67,7 +59,7 @@ function TweetBox({ avatar }) {
             <label htmlFor="username">Username:</label>
             <input
               id="username"
-              onChange={(e) => setTweetUsername(e.target.value)}
+              readOnly
               value={tweetAvatar.username || ""}
               placeholder="Tell us your username?"
               type="text"
@@ -85,14 +77,24 @@ function TweetBox({ avatar }) {
             type="text"
           ></input>
         </div>
-
-        <Button
-          type="submit"
-          onClick={sendTweet}
-          className="tweetBox_tweetButton"
-        >
-          Tweet
-        </Button>
+        {!tweetAvatar ? (
+          <Button
+            type="submit"
+            disabled
+            onClick={sendTweet}
+            className="tweetBox_tweetButton"
+          >
+            Tweet
+          </Button>
+        ) : (
+          <Button
+            type="submit"
+            onClick={sendTweet}
+            className="tweetBox_tweetButton"
+          >
+            Tweet
+          </Button>
+        )}
       </form>
     </div>
   );
