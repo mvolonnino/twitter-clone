@@ -21,6 +21,10 @@ function Sidebar() {
   return (
     <div className="sidebar">
       {/* Twitter Icon */}
+      <img
+        className="avengers_Icon"
+        src="https://img.icons8.com/material/75/000000/avengers.png"
+      />
       <TwitterIcon className="sidebar_twitterIcon" />
       {/* SidbarOption */}
       <SidebarOption active Icon={HomeIcon} text="Home" />
