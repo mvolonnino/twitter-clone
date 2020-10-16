@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import FlipMove from "react-flip-move";
 
 import "./Feed.css";
 import TweetBox from "../TweetBox/TweetBox";
@@ -27,17 +28,19 @@ function Feed() {
       {/* TweetBox */}
       <TweetBox avatar="https://img.icons8.com/color/96/000000/thor.png" />
       {/* Post */}
-      {posts.map((post, i) => (
-        <Post
-          key={i}
-          displayName={post.displayName}
-          username={post.username}
-          verified={post.verified}
-          text={post.text}
-          avatar={post.avatar}
-          image={post.image}
-        />
-      ))}
+      <FlipMove>
+        {posts.map((post, i) => (
+          <Post
+            key={i}
+            displayName={post.displayName}
+            username={post.username}
+            verified={post.verified}
+            text={post.text}
+            avatar={post.avatar}
+            image={post.image}
+          />
+        ))}
+      </FlipMove>
     </div>
   );
 }
