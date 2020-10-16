@@ -26,4 +26,4 @@ This project was to familiarize more so with React and front-end UI rather than 
 
 Matt Volonnino : [GitHub Repository](https://github.com/mvolonnino)
 
-\*\* more to come
+\*\* mobile friendly to come
