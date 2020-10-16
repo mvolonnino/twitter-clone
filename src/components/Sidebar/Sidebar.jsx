@@ -24,6 +24,7 @@ function Sidebar() {
       <img
         className="avengers_Icon"
         src="https://img.icons8.com/material/75/000000/avengers.png"
+        alt="avengers logo"
       />
       <TwitterIcon className="sidebar_twitterIcon" />
       {/* SidbarOption */}
