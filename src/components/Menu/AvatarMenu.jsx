@@ -43,19 +43,56 @@ const StyledMenuItem = withStyles((theme) => ({
 
 export default function AvatarMenu() {
   const { tweetAvatar, setTweetAvatar } = useContext(TweetAvatarContext);
+  console.log({ tweetAvatar });
 
   const avatarObj = {
-    thor: "https://img.icons8.com/color/96/000000/thor.png",
-    ironman: "https://img.icons8.com/color/96/000000/iron-man.png",
-    spiderman: "https://img.icons8.com/color/96/000000/spiderman-head.png",
-    captainAmerica:
-      "https://img.icons8.com/color/96/000000/captain-america.png",
-    thanos: "https://img.icons8.com/color/96/000000/thanos.png",
-    blackWidow: "https://img.icons8.com/color/96/000000/black-widow.png",
-    hawkeye: "https://img.icons8.com/color/96/000000/hawkeye.png",
-    groot: "https://img.icons8.com/color/96/000000/groot.png",
-    wolverine: "https://img.icons8.com/color/96/000000/wolverine.png",
+    thor: {
+      url: "https://img.icons8.com/color/96/000000/thor.png",
+      displayName: "Thor Odinson",
+      username: "GodOfThunder",
+    },
+    ironman: {
+      url: "https://img.icons8.com/color/96/000000/iron-man.png",
+      displayName: "Tony Stark",
+      username: "Iron-Man",
+    },
+    spiderman: {
+      url: "https://img.icons8.com/color/96/000000/spiderman-head.png",
+      displayName: "Peter Parker",
+      username: "Spider-Man",
+    },
+    captainAmerica: {
+      url: "https://img.icons8.com/color/96/000000/captain-america.png",
+      displayName: "Steven Rodgers",
+      username: "CaptainAmerica",
+    },
+    thanos: {
+      url: "https://img.icons8.com/color/96/000000/thanos.png",
+      displayName: "MadTitan",
+      username: "Thanos",
+    },
+    blackWidow: {
+      url: "https://img.icons8.com/color/96/000000/black-widow.png",
+      displayName: "Natasha Romanov",
+      username: "BlackWidow",
+    },
+    hawkeye: {
+      url: "https://img.icons8.com/color/96/000000/hawkeye.png",
+      displayName: "Clint Barton",
+      username: "Hawkeye",
+    },
+    groot: {
+      url: "https://img.icons8.com/color/96/000000/groot.png",
+      displayName: "Groot",
+      username: "Groot",
+    },
+    wolverine: {
+      url: "https://img.icons8.com/color/96/000000/wolverine.png",
+      displayName: "Logan",
+      username: "Wolverine",
+    },
   };
+  // console.log(Object.entries(avatarObj));
 
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -87,11 +124,23 @@ export default function AvatarMenu() {
       >
         {Object.entries(avatarObj).map((avatar, i) => {
           return (
-            <StyledMenuItem key={i} onClick={(e) => setTweetAvatar(avatar[1])}>
+            <StyledMenuItem
+              key={i}
+              onClick={(e) =>
+                setTweetAvatar({
+                  url: avatar[1].url,
+                  displayName: avatar[1].displayName,
+                  username: avatar[1].username,
+                })
+              }
+            >
               <ListItemAvatar>
-                <Avatar src={avatar[1]} onClick={handleClose} />
+                <Avatar src={avatar[1].url} onClick={handleClose} />
               </ListItemAvatar>
-              <ListItemText primary={avatar[0]} onClick={handleClose} />
+              <ListItemText
+                primary={avatar[1].username}
+                onClick={handleClose}
+              />
             </StyledMenuItem>
           );
         })}

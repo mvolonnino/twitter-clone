@@ -21,13 +21,46 @@
   border: none;
 }
 
-.tweetInfo > input {
-  flex: 1;
+.tweetInfo_display {
+  display: flex;
+}
+
+.tweetInfo_name:hover {
+  color: var(--twitter-color);
+}
+
+.tweetInfo_name > label {
+  /* flex: 1; */
   margin-left: 15px;
   margin-bottom: 5px;
   padding: 10px;
   font-size: 15px;
+  /* border: none; */
+}
+
+.tweetInfo_name > input {
   border: none;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.tweetInfo_username:hover {
+  color: var(--twitter-color);
+}
+
+.tweetInfo_username > label {
+  /* flex: 1; */
+  margin-left: 15px;
+  margin-bottom: 5px;
+  padding: 10px;
+  font-size: 15px;
+  /* border: none; */
+}
+
+.tweetInfo_username > input {
+  border: none;
+  padding: 10px;
+  margin-bottom: 5px;
 }
 
 .tweetBox_imageInput {

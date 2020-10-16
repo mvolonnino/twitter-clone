@@ -14,7 +14,7 @@ function TweetBox({ avatar }) {
   const [tweetMessage, setTweetMessage] = useState("");
   const [tweetDisplayName, setTweetDisplayName] = useState("");
   const [tweetUsername, setTweetUsername] = useState("");
-  const [tweetVerified, setTweetVerified] = useState(false);
+  // const [tweetVerified, setTweetVerified] = useState(false);
   const [tweetImage, setTweetImage] = useState("");
   const { tweetAvatar, setTweetAvatar } = useContext(TweetAvatarContext);
 
@@ -23,12 +23,12 @@ function TweetBox({ avatar }) {
 
     db.collection("posts")
       .add({
-        displayName: tweetDisplayName,
-        username: tweetUsername,
+        displayName: tweetAvatar.displayName,
+        username: tweetAvatar.username,
         verified: true,
         text: tweetMessage,
         image: tweetImage,
-        avatar: tweetAvatar,
+        avatar: tweetAvatar.url,
       })
       .then(
         setTweetDisplayName(""),
@@ -43,7 +43,7 @@ function TweetBox({ avatar }) {
       <form>
         <AvatarMenu />
         <div className="tweetBox_input">
-          <Avatar src={tweetAvatar} />
+          <Avatar src={tweetAvatar.url} />
           <input
             onChange={(e) => setTweetMessage(e.target.value)}
             value={tweetMessage}
@@ -51,19 +51,27 @@ function TweetBox({ avatar }) {
             type="text"
           ></input>
         </div>
-        <div className="tweetInfo">
-          <input
-            onChange={(e) => setTweetDisplayName(e.target.value)}
-            value={tweetDisplayName}
-            placeholder="Tell us your name"
-            type="text"
-          ></input>
-          <input
-            onChange={(e) => setTweetUsername(e.target.value)}
-            value={tweetUsername}
-            placeholder="What is your username?"
-            type="text"
-          ></input>
+        <div className="tweetInfo_display">
+          <div className="tweetInfo_name">
+            <label for="displayName">Display Name:</label>
+            <input
+              id="displayName"
+              onChange={(e) => setTweetDisplayName(e.target.value)}
+              value={tweetAvatar.displayName}
+              placeholder="Tell us your name"
+              type="text"
+            ></input>
+          </div>
+          <div className="tweetInfo_username">
+            <label for="username">Username:</label>
+            <input
+              id="username"
+              onChange={(e) => setTweetUsername(e.target.value)}
+              value={tweetAvatar.username}
+              placeholder="Tell us your username?"
+              type="text"
+            ></input>
+          </div>
         </div>
 
         <div className="tweetBox_image">
