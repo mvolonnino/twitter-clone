@@ -28,7 +28,10 @@ function Widgets() {
         <TwitterShareButton
           className="widgets_tweetButton"
           url={"https://www.facebook.com/matt.volonnino/"}
-          options={{ text: "#reactjs is awesome", via: "MattVolonnini1" }}
+          options={{
+            text: "this marvel twitter clone is awesome!",
+            via: "MattVolonnini1",
+          }}
         />
       </div>
     </div>
