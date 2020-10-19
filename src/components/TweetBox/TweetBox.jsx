@@ -27,11 +27,9 @@ function TweetBox({ avatar }) {
         text: tweetMessage,
         image: tweetImage,
         avatar: tweetAvatar.url,
-        timestamp: {
-          fullStamp: Date(),
-          dateString: new Date().toDateString(),
-          timeString: new Date().toLocaleTimeString(),
-        },
+        fullStamp: Date(),
+        dateString: new Date().toDateString(),
+        timeString: new Date().toLocaleTimeString(),
       })
       .then(setTweetMessage(""), setTweetImage(""), setTweetAvatar(""));
   };

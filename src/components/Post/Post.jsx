@@ -12,7 +12,16 @@ import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
 
 const Post = forwardRef(
   (
-    { displayName, username, verified, text, image, avatar, timestamp },
+    {
+      displayName,
+      username,
+      verified,
+      text,
+      image,
+      avatar,
+      dateString,
+      timeString,
+    },
     ref
   ) => {
     return (
@@ -27,8 +36,7 @@ const Post = forwardRef(
                 {displayName}
                 <span className="post_headerSpecial">
                   {verified && <VerifiedUserIcon className="post_badge" />} @
-                  {username} *{" "}
-                  {`${timestamp.dateString} ${timestamp.timeString}`}
+                  {username} * {`${dateString} ${timeString}`}
                 </span>
               </h3>
             </div>

@@ -15,7 +15,7 @@ function Feed() {
   useEffect(() => {
     // onSnapshot gives us back a snapshot of db and listening to anytime data changes. Then setPosts to the value of the snapshot documents and map through it and grab every single doc, map and get the document data ie. displayName, username, text...
     db.collection("posts")
-      .orderBy("timestamp", "desc")
+      .orderBy("fullStamp", "desc")
       .onSnapshot((snapshot) =>
         setPosts(
           snapshot.docs.map((doc) => {
@@ -48,7 +48,8 @@ function Feed() {
             text={post.docData.text}
             avatar={post.docData.avatar}
             image={post.docData.image}
-            timestamp={post.docData.timestamp}
+            dateString={post.docData.dateString}
+            timeString={post.docData.timeString}
           />
         ))}
       </FlipMove>
